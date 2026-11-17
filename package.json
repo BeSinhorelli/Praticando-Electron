@@ -1,0 +1,28 @@
+{
+  "name": "estoque-electron",
+  "version": "1.0.0",
+  "description": "Sistema de Controle de Estoque Desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.seunome.estoque",
+    "productName": "Controle de Estoque",
+    "files": [
+      "main.js",
+      "preload.js",
+      "teste.png",
+      "src/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "teste.png"
+    }
+  }
+}
